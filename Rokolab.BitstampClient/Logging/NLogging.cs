@@ -40,13 +40,13 @@ namespace Rokolab.BitstampClient.Logging
         public void TraceError(string message, Exception exception = null)
         {
             SetLogger();
-            _log.ErrorException(message, exception);
+            _log.Error(exception, message);
         }
 
         public void TraceException(string message, Exception exception)
         {
             SetLogger();
-            _log.ErrorException(message, exception);
+            _log.Error(exception, message);
         }
 
         public void TraceWarn(string message)
